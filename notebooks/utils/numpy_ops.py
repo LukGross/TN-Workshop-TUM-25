@@ -114,9 +114,9 @@ def bond_dims_of_MPO(tensors):
 
 
 def phys_dims_of_MPO(tensors):
-    phys_dims = ()
+    phys_dims = []
     for t in tensors:
-        phys_dims += (t.shape[1],)
+        phys_dims += [(t.shape[1],t.shape[2])]
     return phys_dims
 
 
